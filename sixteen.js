@@ -1,14 +1,15 @@
-function password(str) {
+function passwordVerification(password) {
   
-    if (str.length >= 6) {
+    if (password.length >= 6 && password.match(/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9!@#$%^&*a-zA-Z]{6,}/g)) {
         return "Ваш пароль безпечний";
     }
     return "Не добрий пароль";
   }
   
-  console.log(password("a0A#ccsx"));
-  console.log(password("45ghghfgdfdh"));
-  console.log(password("fgg"));
+  console.log(passwordVerification("a23DFjhhgg"));
+  console.log(passwordVerification("45Ghghfgdfdh"));
+  console.log(passwordVerification("fgg"));
+  console.log(passwordVerification("145214fgg"));
   
 /* 
 16. Напишите функцию, которая проверяет пароль на корректность.
