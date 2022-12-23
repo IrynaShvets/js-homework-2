@@ -1,13 +1,18 @@
-function a(str) {
+function  checksStringIsValid(str) {
+
   if (str.length >= 3 && str.length <= 16 && str.length !== "") {
+    if ((/[0-9]/.test(str)) === true) {
+      return "Не коректна строка, вміщує цифри. Виправіть будь ласка.";
+    }
     return "Строка коректнa";
   }
-  return "Не коректна строка. Виправіть будь ласка,";
+  return "Не коректна строка. Виправіть будь ласка.";
 }
 
-console.log(a("Як справи в тебе? Що робиш?"));
-console.log(a("Привіт"));
-console.log(a(""));
+console.log(checksStringIsValid("Як справи в тебе? Що робиш?"));
+console.log(checksStringIsValid("Привіт1"));
+console.log(checksStringIsValid("Привіт"));
+console.log(checksStringIsValid(""));
 
 /* 
 15. Напишите функцию, которая проверяет корректность строки.
