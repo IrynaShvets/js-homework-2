@@ -19,11 +19,9 @@ const usersArray = [
   },
 ];
 
-/* 
------------------не добре
-*/
 function getHighestSalary(usersArray) {
-  return usersArray.filter((e)=>e.salary).map((e)=>e.name);
+
+  return usersArray.filter((e)=>e.salary > 1200).map((e)=>e.name).join(' ');
 }
 
 console.log(getHighestSalary(usersArray));

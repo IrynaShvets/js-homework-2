@@ -10,14 +10,8 @@ function changedArray(arr) {
     }
     return element;
   }
-  
-/* 
--------------Забрати пробіл
-*/
 
   console.log(changedArray([2, 3, 10, "Привіт", "Здоров був"]))
-
-
 
 /* 
 9. Напишите функцию, которая принимает массив. 
