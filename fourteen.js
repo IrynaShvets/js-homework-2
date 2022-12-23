@@ -20,8 +20,8 @@ const usersArray = [
 ];
 
 function getHighestSalary(usersArray) {
-
-  return usersArray.filter((e)=>e.salary > 1200).map((e)=>e.name).join(' ');
+ const maxSalary = Math.max(...usersArray.map(el => el.salary), 0);
+ return usersArray.filter((el)=>el.salary === maxSalary).map((e)=>e.name).join(' ');
 }
 
 console.log(getHighestSalary(usersArray));
